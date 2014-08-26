@@ -1,0 +1,7 @@
+# /etc/acpi/events/asus-keyboard-backlight-up
+# This is called when the user presses the key brightness 
+# up button and calls /etc/acpi/asus-keyboard-backlight.sh for
+# further processing.
+
+event=hotkey ATK0100:00 0000001[0123456789abcdef]
+action=/etc/acpi/asus-lcd-brightness.sh up
