@@ -1,0 +1,6 @@
+video/*.ko
+video/*.mod.c
+video/*.o
+video/*.order
+video/*.symvers
+*.swp
