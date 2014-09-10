@@ -3,5 +3,6 @@
 # down button and calls /etc/acpi/asus-keyboard-backlight.sh for
 # further processing.
 
-event=hotkey ATK0100:00 0000002[0123456789abcdef]
+#event=hotkey ATK0100:00 0000002[0123456789abcdef]
+event=video/brightnessdown BRTDN
 action=/etc/acpi/asus-lcd-brightness.sh down

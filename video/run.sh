@@ -18,5 +18,8 @@ else
   echo "** Seteando inicio automático de módulo"
   echo asus_nvidia >> /etc/modules-load.d/asus_nvidia.conf
 
+  echo "** Blacklisteando modulo nvidia"
+  echo nvidia >> /etc/modprobe.d/blacklist-nvidia.conf
+
   echo "Fin"
 fi

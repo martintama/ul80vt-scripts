@@ -3,5 +3,6 @@
 # up button and calls /etc/acpi/asus-keyboard-backlight.sh for
 # further processing.
 
-event=hotkey ATK0100:00 0000001[0123456789abcdef]
+#event=hotkey ATK0100:00 0000001[0123456789abcdef]
+event=video/brightnessup BRTUP
 action=/etc/acpi/asus-lcd-brightness.sh up
