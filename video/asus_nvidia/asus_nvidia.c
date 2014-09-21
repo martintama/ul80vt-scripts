@@ -31,6 +31,7 @@ static int kill_nvidia(void)
       printk("%s: _OFF method call failed: %s\n", __func__, acpi_format_exception(status));
       return -ENOSYS;
   }
+  printk("kfree buffer.pointer"); 
   kfree(buffer.pointer);
 
   printk("%s: disabled the discrete graphics card\n",__func__);
@@ -63,8 +64,10 @@ static int __init asus_nvidia(void)
   return kill_nvidia();
 }
 
-static void dummy(void)
+static int dummy(void)
 {
+    printk("Module_exit triggered");
+    return 0;
 }
 
 module_init(asus_nvidia);
